@@ -1,9 +1,17 @@
 import { createBoard } from '@wixc3/react-board';
-import App from '../../App';
-import { RUBBER_DUCKY, SCROOGE } from '../../data';
+import { Form } from '../../components/form/form';
+
 
 export default createBoard({
     name: 'App',
-    Board: () => <App product={RUBBER_DUCKY} user={SCROOGE} />,
+    Board: () => <div>
+        <Form>
+            {undefined}
+        </Form>
+    </div>,
     isSnippet: true,
+    environmentProps: {
+        canvasWidth: 268,
+        canvasHeight: 222
+    }
 });
